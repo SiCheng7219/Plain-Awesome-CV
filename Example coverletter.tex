@@ -1,0 +1,150 @@
+% ------------------------------------------------------------------------------
+% plain-awesome-cv.tex - Example CV using the Plain-Awesome-CV class
+%
+% Author: Sicheng Jiang
+% URL: https://github.com/SiCheng7219/Plain-Awesome-CV
+%
+% This document is an example usage of the "Plain-Awesome-CV" LaTeX class,
+% which is a simplified version based on Awesome-CV by Claud D. Park(https://github.com/posquit0/Awesome-CV).
+%
+% License:
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License (LPPL), version 1.3c or later.
+% The latest version of this license is available at:
+%    https://www.latex-project.org/lppl.txt
+%
+% This work has the LPPL maintenance status: maintained
+% The Current Maintainer of this work is: Sicheng Jiang
+%
+% ------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{plain-awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo[circle,noedge,left]{profile}
+\name{Your}{Name}
+\position{Your {\enskip\cdotp\enskip}position}
+\address{Your Address}
+\extrainfo{
+\cvitemwithicon{\faPhone}{ (+00) 12345678} | 
+\cvitemwithicon{\faEnvelope}{\href{mailto:xxxx@xxx}{ Your Email}}\\
+\cvitemwithicon{\faHome}{\href{https://}{ Your Homepage}} | \cvitemwithicon{\faGithub}{\href{https://github.com/}{ Your Github}} | 
+\cvitemwithicon{\faLinkedin}{\href{https://www.linkedin.com/}{ Your Linkedin}}
+}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+% \renewcommand*{\headerfont}{\rmfamily}
+% \renewcommand*{\headerfontlight}{\rmfamily}
+% \renewcommand*{\footerfont}{\rmfamily}
+% \renewcommand*{\bodyfont}{\rmfamily}
+% \renewcommand*{\bodyfontlight}{\rmfamily}
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{ord=omit}
+\recipient
+  {Human Resources Department}
+  {The Reverie Hotel\\
+Penacony}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Position within The Family's Dreamscape Operations}
+% How the letter is opened
+\letteropening{Dear Esteemed Members of The Family,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Your Name~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+I am writing to express my keen interest in joining the esteemed ranks of The Family, contributing to the harmonious vision that Penacony embodies. As the Trailblazer, my journey across the stars has been marked by a commitment to unity, exploration, and the betterment of the communities I engage with.
+
+Throughout my travels, I have encountered diverse civilizations, each with its unique challenges and aspirations. Penacony stands out as a beacon of harmony and festivity, a testament to The Family's dedication to creating a utopian dreamscape. My experiences have equipped me with a deep understanding of cross-cultural dynamics, conflict resolution, and the importance of preserving the delicate balance between reality and dreams.
+
+In my recent endeavors, I have navigated the intricate layers of Penacony's dreamscape, collaborating with various factions to address anomalies and ensure the stability of this realm. These missions have honed my skills in strategic planning, diplomacy, and adaptive problem-solving. I have also demonstrated proficiency in utilizing advanced technologies and coordinating with diverse teams to achieve common goals.
+
+I am particularly drawn to The Family's commitment to inclusivity and the seamless integration of dreams into the fabric of society. I believe that my unique perspective and experiences align with this vision, and I am eager to contribute to ongoing projects that enhance the dreamscape's vibrancy and accessibility.
+
+Enclosed with this letter is my detailed resume, highlighting specific missions and accomplishments that underscore my qualifications. I am enthusiastic about the opportunity to discuss how my background and skills can serve The Family's objectives and further enrich Penacony's legacy.
+
+Thank you for considering my application. I look forward to the possibility of contributing to the continued success and harmony of Penacony.
+
+% \lettersection{About Me}
+
+% \lettersection{Why Dematic?}
+
+% \lettersection{Why Me?}
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+
+
+\end{document}
+
+
